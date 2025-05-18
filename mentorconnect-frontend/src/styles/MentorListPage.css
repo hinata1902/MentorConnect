@@ -1,0 +1,103 @@
+/* MentorListPage.css */
+
+.mentor-list-container {
+    padding: 20px;
+}
+
+.mentor-list-title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.mentor-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mentor-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mentor-info {
+    display: flex;
+    align-items: center;
+}
+
+.mentor-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    background-color: #eee; 
+}
+
+.mentor-details {
+    flex-grow: 1;
+}
+
+.mentor-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.mentor-specialization {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.mentor-actions button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.mentor-actions button:hover {
+    background-color: #0056b3;
+}
+
+.mentor-item.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.mentor-item.loading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(136, 213, 229, 0.8);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    color: #888;
+    font-size: 0.9em;
+}
+
+.mentor-item.loading::before {
+    content: 'Loading...'; 
+}
+
+.mentor-list-error {
+    color: red;
+    margin-top: 10px;
+}
